@@ -2,6 +2,9 @@ import tkinter as tk
 from tkinter import ttk
 win =tk.Tk()
 win.title('Jarvis')
+win.geometry('400x400')
+style=Style()
+style.configure('Tbut')
 
 userl = ttk.Label(win,text='Username : ')
 userl.grid(row=0,column=0)
