@@ -23,10 +23,16 @@ choice.grid(row=4, column=0, sticky=tk.W)
 choicebutton=ttk.Button(win,text='Generate Password')
 choicebutton.grid(row=4,column=1)
 
-per=ttk.Radiobutton(win,text='Public')
+perv=tk.StringVar()
+per = ttk.Radiobutton(win, text='Public', textvariable=perv)
 per.grid(row=5,column=1)
 
-sub = ttk.Button(win,text='Submit')
+def take():
+    username=uservar.get()
+    password=passvar.get()
+    print(f'{username} + ...password is..{password}')
+
+sub = ttk.Button(win,text='Submit', command=take)
 sub.grid(row=6,column=1)
 
 win.mainloop()
