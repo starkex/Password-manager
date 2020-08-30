@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox as msbox
+
 win =tk.Tk()
 win.title('Jarvis')
 win.geometry('400x400')
@@ -48,8 +50,15 @@ def take():
     password=passvar.get()
     print(f'{username} + ...password is..{password}')
 
-sub = ttk.Button(labframe,text='Submit', command=take, width=20)
+
+def msg():
+    msbox.showinfo('Password Successfully Stored !!')
+
+sub = ttk.Button(labframe,text='Submit', command=msg, width=20)
 sub.grid(row=7, column=1, pady=5)
+
+
+     
 
 
 win.mainloop()
